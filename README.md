@@ -65,6 +65,10 @@ Development / Debug
 |pwa:update	|New version detected|
 |pwa:connection	|Online / Offline change|
 
+---
+
+## 📁 Folder Structure
+
 ```txt
 pwa-helper/
  ├─ pwa-helper.js
