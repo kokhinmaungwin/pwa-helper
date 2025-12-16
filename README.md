@@ -30,3 +30,57 @@ online/offline status — all in a single JavaScript file.
 ```html
 <script src="https://cdn.jsdelivr.net/gh/kokhinmaungwin/pwa-helper@v1.0.0/pwa-helper.min.js"></script>
 ```
+```html
+<script src="https://cdn.jsdelivr.net/gh/kokhinmaungwin/pwa-helper@v1.0.0/pwa-helper.js"></script>
+```
+
+---
+
+## Basic Usage
+```html
+<button id="installBtn" hidden>Install App</button>
+
+<script>
+  const btn = document.getElementById("installBtn");
+
+  window.addEventListener("pwa:ready", () => {
+    btn.hidden = false;
+  });
+
+  btn.onclick = () => PWAHelper.install();
+
+  PWAHelper.registerSW();
+</script>
+```
+
+---
+
+## Events
+
+|Event	|Description |
+|-------|------------|
+|pwa:ready	|Install available|
+|pwa:installed	|App installed|
+|pwa:update	|New version detected|
+|pwa:connection	|Online / Offline change|
+
+```txt
+pwa-helper/
+ ├─ pwa-helper.js
+ ├─ pwa-helper.min.js
+ ├─ manifest.json
+ ├─ service-worker.js
+ ├─ LICENSE
+ ├─ CHANGELOG.md
+ ├─ README.md
+ └─ demo.html   (optional but recommended)
+```
+
+---
+
+## License
+
+MIT License
+© 2025 Khin Maung Win
+
+---
