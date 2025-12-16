@@ -30,6 +30,7 @@ online/offline status — all in a single JavaScript file.
 ```html
 <script src="https://cdn.jsdelivr.net/gh/kokhinmaungwin/pwa-helper@v1.0.0/pwa-helper.min.js"></script>
 ```
+Development / Debug
 ```html
 <script src="https://cdn.jsdelivr.net/gh/kokhinmaungwin/pwa-helper@v1.0.0/pwa-helper.js"></script>
 ```
