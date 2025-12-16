@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>PWA Helper Demo</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <h1>PWA Helper Demo</h1>
+  <button id="installBtn" hidden>Install App</button>
+  <p id="status"></p>
+
+  <script src="pwa-helper.js"></script>
+  <script>
+    const btn = document.getElementById("installBtn");
+    const status = document.getElementById("status");
+
+    window.addEventListener("pwa:ready", () => {
+      btn.hidden = false;
+    });
+
+    window.addEventListener("pwa:connection", e => {
+      status.textContent = "Status: " + e.detail;
+    });
+
+    btn.onclick = () => PWAHelper.install();
+    PWAHelper.registerSW();
+  </script>
+</body>
+</html>
